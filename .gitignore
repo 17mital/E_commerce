@@ -33,7 +33,8 @@ log/
 # React build folders (frontend + admin panel)
 admin-panel/build/
 ecommerce-frontend/build/
-
+admin-panel/node_modules/
+ecommerce-frontend/node_modules/
 
 # Chatbot and backend
 chatbot/node_modules/
