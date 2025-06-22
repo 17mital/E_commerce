@@ -1,0 +1,21 @@
+/* index.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+form input {
+  border-radius: 4px;
+}
+
+.btn {
+  border-radius: 5px;
+}
