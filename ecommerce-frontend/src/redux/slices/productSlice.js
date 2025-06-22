@@ -1,3 +1,4 @@
+// redux/slices/productSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const productSlice = createSlice({
@@ -17,8 +18,31 @@ const productSlice = createSlice({
       } else {
         state.cart.push({ ...action.payload, qty: 1 });
       }
+    },
+    incrementQty: (state, action) => {
+      const item = state.cart.find(i => i._id === action.payload);
+      if (item) item.qty += 1;
+    },
+    decrementQty: (state, action) => {
+      const item = state.cart.find(i => i._id === action.payload);
+      if (item && item.qty > 1) item.qty -= 1;
+    },
+    removeFromCart: (state, action) => {
+      state.cart = state.cart.filter(i => i._id !== action.payload);
+    },
+    clearCart: (state) => {
+      state.cart = [];
     }
   }
 });
-export const { setProducts, addToCart } = productSlice.actions;
+
+export const {
+  setProducts,
+  addToCart,
+  incrementQty,
+  decrementQty,
+  removeFromCart,
+  clearCart
+} = productSlice.actions;
+
 export default productSlice.reducer;
