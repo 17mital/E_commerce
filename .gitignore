@@ -31,8 +31,7 @@ log/
 *.pid.lock
 
 # React build folders (frontend + admin panel)
-ecommerce-frontend/build/
-admin-panel/build/
+
 
 # Chatbot and backend
 chatbot/node_modules/
