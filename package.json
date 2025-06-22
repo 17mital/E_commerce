@@ -1,0 +1,13 @@
+{
+  "name": "ecommerce-multivendor-platform",
+  "scripts": {
+    "admin": "npm start --prefix admin-panel",
+    "frontend": "npm start --prefix ecommerce-frontend",
+    "backend": "nodemon ecommerce-backend/index.js",
+    "chatbot": "node chatbot/index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run admin\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
