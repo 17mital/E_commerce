@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: '/api' }); // ✅ Relative URL
+const API = axios.create({ baseURL: 'https://e-commerce-bssm.onrender.com/api' }); // ✅ Relative URL
 
 
 API.interceptors.request.use((req) => {
