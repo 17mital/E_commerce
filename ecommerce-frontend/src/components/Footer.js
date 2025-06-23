@@ -66,12 +66,12 @@ export default function Footer() {
   ]
 
   const paymentMethods = [
-    { name: "Visa", icon: "💳" },
-    { name: "Mastercard", icon: "💳" },
-    { name: "PayPal", icon: "💰" },
-    { name: "Apple Pay", icon: "📱" },
-    { name: "Google Pay", icon: "📱" },
-    { name: "Stripe", icon: "💳" },
+    { name: "Visa", class: "visa" },
+    { name: "Mastercard", class: "mastercard" },
+    { name: "PayPal", class: "paypal" },
+    { name: "Apple Pay", class: "apple-pay" },
+    { name: "Google Pay", class: "google-pay" },
+    { name: "American Express", class: "amex" },
   ]
 
   return (
@@ -307,8 +307,8 @@ export default function Footer() {
                 <span className="payment-label">We Accept:</span>
                 <div className="payment-methods">
                   {paymentMethods.map((method, index) => (
-                    <div key={index} className="payment-method" title={method.name}>
-                      <span className="payment-icon">{method.icon}</span>
+                    <div key={index} className={`payment-method ${method.class}`} title={method.name}>
+                      <span className="payment-icon"></span>
                     </div>
                   ))}
                 </div>
