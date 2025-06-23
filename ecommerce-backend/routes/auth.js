@@ -77,19 +77,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// 3️⃣ Profile route - protected
-router.get('/me', auth, async (req, res) => {
-  try {
-    const user = req.user;
-    res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      role: user.role
-    });
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch user profile' });
-  }
-});
+
 
 module.exports = router;
