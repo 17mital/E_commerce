@@ -10,7 +10,7 @@ export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://e-commerce-bssm.onrender.com/api/auth/login', { email, password });
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -22,7 +22,7 @@ export const signupUser = createAsyncThunk(
   'auth/signupUser',
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', formData);
+      const res = await axios.post('https://e-commerce-bssm.onrender.com/api/auth/signup', formData);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data);

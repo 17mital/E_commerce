@@ -257,7 +257,7 @@ export default function ProductDetail() {
                     <p>{rev.comment}</p>
                     {rev.imageUrl && (
                       <div className="review-image">
-                        <img src={`http://localhost:5000/${rev.imageUrl}`} alt="Review" />
+                        <img src={`https://e-commerce-bssm.onrender.com/${rev.imageUrl}`} alt="Review" />
                       </div>
                     )}
                   </div>
