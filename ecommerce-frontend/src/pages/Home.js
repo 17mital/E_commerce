@@ -12,20 +12,14 @@ export default function Home() {
   const sliderImages = [
     {
       url: "/images/background1.jpg",
-      title: "Summer Collection 2024",
-      subtitle: "Discover the latest trends",
       buttonText: "Shop Now",
     },
     {
       url: "/images/background2.jpg",
-      title: "Special Offers",
-      subtitle: "Up to 50% off on selected items",
       buttonText: "View Deals",
     },
     {
       url: "/images/background3.jpg",
-      title: "New Arrivals",
-      subtitle: "Fresh styles just landed",
       buttonText: "Explore",
     },
   ]
