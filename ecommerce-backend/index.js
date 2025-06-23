@@ -35,9 +35,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // 👉 Serve frontend static files (e.g., Vite)
 const frontendPath = path.join(__dirname, '../ecommerce-frontend/dist');
 app.use(express.static(frontendPath));
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(frontendPath, 'index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
 });
+
 
 // ✅ Connect DB and start server
 mongoose.connect(process.env.MONGO_URI)
