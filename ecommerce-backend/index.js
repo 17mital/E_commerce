@@ -2,37 +2,50 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 const app = express();
 
-// Middlewares
-app.use(cors());
+// Middleware
+app.use(cors({
+  origin: '*', // You can restrict to frontend origin if needed
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/product');
-const checkoutRoutes = require('./routes/checkout'); // ✅ Add this line
+const checkoutRoutes = require('./routes/checkout');
 const paymentRoutes = require('./routes/payment');
 const reviewRoutes = require('./routes/review');
-const path = require('path');
 const wishlistRoutes = require('./routes/wishlist');
 const orderRoutes = require('./routes/order');
+
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
-app.use('/api/checkout', checkoutRoutes); // ✅ Use the new route
+app.use('/api/checkout', checkoutRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use('/api/reviews', reviewRoutes);
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/order', orderRoutes);
-// Connect DB and start server
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// 👉 Serve frontend static files (e.g., Vite)
+const frontendPath = path.join(__dirname, '../ecommerce-frontend/dist');
+app.use(express.static(frontendPath));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(frontendPath, 'index.html'));
+});
+
+// ✅ Connect DB and start server
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected');
-    app.listen(process.env.PORT || 5000, () =>
-      console.log(`🚀 Server running on port ${process.env.PORT || 5000}`)
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () =>
+      console.log(`🚀 Server running on port ${PORT}`)
     );
   })
   .catch((err) => {
