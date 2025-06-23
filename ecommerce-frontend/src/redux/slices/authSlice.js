@@ -6,30 +6,49 @@ import axios from 'axios';
 const userFromStorage = localStorage.getItem('user');
 const tokenFromStorage = localStorage.getItem('token');
 
+// 🔐 Login Thunk
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const res = await axios.post('https://e-commerce-bssm.onrender.com/api/auth/login', { email, password });
+      const res = await axios.post(
+        'https://e-commerce-bssm.onrender.com/api/auth/login',
+        { email, password },
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
       return res.data;
     } catch (err) {
-      return rejectWithValue(err.response.data);
+      return rejectWithValue(err.response?.data || { error: 'Login failed' });
     }
   }
 );
 
+// 📝 Signup Thunk
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await axios.post('https://e-commerce-bssm.onrender.com/api/auth/signup', formData);
+      const res = await axios.post(
+        'https://e-commerce-bssm.onrender.com/api/auth/signup',
+        formData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
       return res.data;
     } catch (err) {
-      return rejectWithValue(err.response.data);
+      return rejectWithValue(err.response?.data || { error: 'Signup failed' });
     }
   }
 );
 
+// 🔧 Auth Slice
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
@@ -51,6 +70,7 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      // Login cases
       .addCase(loginUser.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -61,7 +81,6 @@ const authSlice = createSlice({
         state.isAuthenticated = true;
         state.loading = false;
 
-        // Save to localStorage
         localStorage.setItem('user', JSON.stringify(action.payload.user));
         localStorage.setItem('token', action.payload.token);
       })
@@ -70,6 +89,7 @@ const authSlice = createSlice({
         state.loading = false;
       })
 
+      // Signup cases
       .addCase(signupUser.pending, (state) => {
         state.loading = true;
         state.error = null;
