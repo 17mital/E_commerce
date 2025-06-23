@@ -11,19 +11,19 @@ export default function Home() {
   // Sample slider images - replace with your actual images
   const sliderImages = [
     {
-      url: "/placeholder.svg?height=500&width=1200",
+      url: "/images/background1.jpg",
       title: "Summer Collection 2024",
       subtitle: "Discover the latest trends",
       buttonText: "Shop Now",
     },
     {
-      url: "/placeholder.svg?height=500&width=1200",
+      url: "/images/background2.jpg",
       title: "Special Offers",
       subtitle: "Up to 50% off on selected items",
       buttonText: "View Deals",
     },
     {
-      url: "/placeholder.svg?height=500&width=1200",
+      url: "/images/background3.jpg",
       title: "New Arrivals",
       subtitle: "Fresh styles just landed",
       buttonText: "Explore",

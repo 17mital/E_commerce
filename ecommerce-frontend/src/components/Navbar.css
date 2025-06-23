@@ -1,4 +1,4 @@
-/* Modern Professional Navbar Styles */
+/* Modern Navbar Styles */
 .modern-navbar {
   position: fixed;
   top: 0;
@@ -72,24 +72,8 @@
 }
 
 .brand-icon {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.2rem;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.brand-icon:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: rotate(5deg);
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .brand-text {
@@ -98,7 +82,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  letter-spacing: -0.5px;
 }
 
 /* Center Section - Search */
@@ -139,7 +122,6 @@
   font-size: 1.2rem;
   margin: 0 1rem;
   color: #666;
-  font-weight: 300;
 }
 
 .search-input {
@@ -166,8 +148,6 @@
   border-radius: 50%;
   transition: all 0.3s ease;
   margin-right: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 300;
 }
 
 .clear-search:hover {
@@ -261,7 +241,7 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -282,27 +262,21 @@
   transition: all 0.3s ease;
   font-weight: 500;
   position: relative;
-  font-size: 0.9rem;
-  letter-spacing: 0.3px;
 }
 
 .nav-link:hover {
   color: white;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
 .nav-icon {
-  font-size: 1rem;
-  font-weight: 500;
-  min-width: 20px;
-  text-align: center;
+  font-size: 1.2rem;
 }
 
 .nav-text {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 /* Cart Badge */
@@ -365,7 +339,6 @@
   font-weight: bold;
   font-size: 1.1rem;
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .user-avatar.shopkeeper {
@@ -438,10 +411,7 @@
 }
 
 .dropdown-icon {
-  font-size: 1rem;
-  font-weight: 500;
-  min-width: 16px;
-  text-align: center;
+  font-size: 1.1rem;
 }
 
 .dropdown-divider {
@@ -643,10 +613,9 @@
 }
 
 .sidebar-icon {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   width: 24px;
   text-align: center;
-  font-weight: 500;
 }
 
 .sidebar-text {
@@ -695,7 +664,6 @@
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
-  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .mobile-user-details {
@@ -784,9 +752,7 @@
   }
 
   .brand-icon {
-    font-size: 1.2rem;
-    width: 35px;
-    height: 35px;
+    font-size: 1.5rem;
   }
 }
 
