@@ -249,36 +249,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="newsletter">
-        <div className="container">
-          <div className="newsletter-content">
-            <div className="newsletter-header">
-              <h2 className="newsletter-title">Stay Updated</h2>
-              <p className="newsletter-subtitle">
-                Subscribe to get special offers, free giveaways, and exclusive deals.
-              </p>
-            </div>
-            <div className="newsletter-form">
-              <div className="input-wrapper">
-                <input type="email" placeholder="Enter your email address" className="newsletter-input" />
-                <button className="newsletter-btn">Subscribe</button>
-              </div>
-              <div className="newsletter-benefits">
-                <div className="benefit-item">
-                  <span>Exclusive Offers</span>
-                </div>
-                <div className="benefit-item">
-                  <span>Early Access</span>
-                </div>
-                <div className="benefit-item">
-                  <span>Mobile Alerts</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

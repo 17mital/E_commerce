@@ -21,5 +21,5 @@ export const deleteProduct = (id) => API.delete(`/products/${id}`);
 export const fetchProductById = (id) => API.get(`/products/${id}`);
 export const addToWishlist = (productId) => API.post(`/wishlist/${productId}`);
 export const removeFromWishlist = (productId) => API.delete(`/wishlist/${productId}`);
-
+export const fetchMyOrders = () => API.get('/order/my-orders');
 export default API;
