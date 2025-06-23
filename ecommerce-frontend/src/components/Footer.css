@@ -559,15 +559,18 @@
 }
 
 .payment-method {
-  width: 35px;
-  height: 25px;
-  
+ width: 50px;
+  height: 32px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
   font-size: 0.7rem;
   font-weight: bold;
   color: white;
@@ -575,15 +578,62 @@
 }
 
 .payment-method:hover {
-  background: white;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.payment-icon {
-  font-size: 1rem;
+.payment-method.visa {
+  background: linear-gradient(135deg, #1a1f71 0%, #0f3460 100%);
+}
+.payment-method.visa::after {
+  content: "VISA";
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+.payment-method.mastercard {
+  background: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%);
 }
 
+.payment-method.mastercard::after {
+  content: "MC";
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+.payment-method.paypal {
+  background: linear-gradient(135deg, #003087 0%, #009cde 100%);
+}
+
+.payment-method.paypal::after {
+  content: "PayPal";
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+.payment-method.apple-pay {
+  background: linear-gradient(135deg, #000000 0%, #434343 100%);
+}
+
+.payment-method.apple-pay::after {
+  content: "🍎 Pay";
+  font-size: 0.6rem;
+}
+.payment-method.google-pay {
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+}
+
+.payment-method.google-pay::after {
+  content: "G Pay";
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+.payment-method.amex {
+  background: linear-gradient(135deg, #006fcf 0%, #012169 100%);
+}
+
+.payment-method.amex::after {
+  content: "AMEX";
+  font-size: 0.6rem;
+  letter-spacing: 0.5px;
+}
 .security-badges {
   display: flex;
   gap: 1rem;
