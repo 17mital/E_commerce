@@ -20,10 +20,12 @@
 /* Hero Slider Styles */
 .hero-slider {
   position: relative;
-  height: 70vh;
-  min-height: 500px;
+  height: 80vh;
+  min-height: 600px;
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .slider-container {
