@@ -150,7 +150,7 @@ export default function Footer() {
         <div className="container">
           <div className="footer-grid">
             {/* Brand Section */}
-            {/* <div className="footer-brand">
+            <div className="footer-brand">
               <Link href="/" className="footer-logo">
                 <div className="logo-icon">🛍️</div>
                 <span className="logo-text">StyleHub</span>
@@ -173,7 +173,7 @@ export default function Footer() {
                   <span className="stat-label">Satisfaction</span>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             {/* Shop Links */}
             <div className="footer-section">
