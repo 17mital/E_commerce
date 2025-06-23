@@ -33,12 +33,12 @@ app.use('/api/order', orderRoutes);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // 👉 Serve frontend static files (e.g., Vite)
-const frontendPath = path.resolve(__dirname, '../ecommerce-frontend/build');
-app.use(express.static(frontendPath));
+// const frontendPath = path.resolve(__dirname, '../ecommerce-frontend/build');
+// app.use(express.static(frontendPath));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(frontendPath, 'index.html'));
+// });
 
 
 
