@@ -234,10 +234,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="reviews-actions">
-            // <button className="view-all-reviews-btn">View All Reviews</button>
-            // <button className="write-review-btn">Write a Review</button>
-          </div>
+          
         </div>
       </section>
 
