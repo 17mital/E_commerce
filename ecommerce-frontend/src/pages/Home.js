@@ -156,9 +156,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="view-all-container">
-            // <button className="view-all-btn">View All Products</button>
-          </div>
+         
         </div>
       </section>
 
