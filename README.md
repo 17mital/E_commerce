@@ -58,7 +58,21 @@ StyleHub is a fully functional, feature-rich e-commerce website built for both *
 - Database: MongoDB Atlas
 
 ---
+![ecom1](./ecom1.png)  
+![ecom2](./ecom2.png)  
+![ecom3](./ecom3.png)  
+![ecom4](./ecom4.png)  
+![ecom5](./ecom5.png)  
+![ecom6](./ecom6.png)  
+![ecom7](./ecom7.png)  
+![ecom10](./ecom10.png)  
+![ecom11](./ecom11.png)  
+![ecom12](./ecom12.png)  
+![ecom13](./ecom13.png)  
+![ecom14](./ecom14.png)  
+![ecom15](./ecom15.png)  
 
+---
 ## 🔑 Environment Variables
 
 Create a `.env` file in the root directory and add the following:
