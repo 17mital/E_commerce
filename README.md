@@ -97,9 +97,9 @@ npm install
 npm start
 ```
 ```bash
-cd client # for frontend
+cd client # for backend
 npm install
-npm start
+nodemon index.js
 ```
 ## 📄 License
 This project is open-source and available under the MIT License.
